@@ -94,7 +94,7 @@ class _QuizScreenState extends State<QuizScreen> {
               return Center(
                 child: Text(
                   "Error:${snapshot.error}",
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
                       color: Colors.white),
@@ -126,7 +126,7 @@ class _QuizScreenState extends State<QuizScreen> {
                               onPressed: () {
                                 Navigator.pop(context);
                               },
-                              icon: Icon(
+                              icon: const Icon(
                                 Icons.close,
                                 color: Colors.red,
                                 size: 30,
@@ -138,7 +138,7 @@ class _QuizScreenState extends State<QuizScreen> {
                             children: [
                               Text(
                                 "$seconds",
-                                style: TextStyle(
+                                style: const TextStyle(
                                     color: Colors.white, fontSize: 25),
                               ),
                               SizedBox(
@@ -147,14 +147,14 @@ class _QuizScreenState extends State<QuizScreen> {
                                 child: CircularProgressIndicator(
                                   value: seconds / 60,
                                   valueColor:
-                                      AlwaysStoppedAnimation(Colors.white),
+                                      const AlwaysStoppedAnimation(Colors.white),
                                 ),
                               )
                             ],
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Center(
@@ -163,27 +163,27 @@ class _QuizScreenState extends State<QuizScreen> {
                           width: 250,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Align(
                         alignment: Alignment.centerLeft,
                         child: Text(
                           "Question ${currentIndexQuestion + 1} of ${data.length}",
-                          style: TextStyle(
+                          style: const TextStyle(
                               fontSize: 18,
                               color: Colors.white,
                               fontWeight: FontWeight.bold),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Text(
                         data[currentIndexQuestion]['question'],
-                        style: TextStyle(fontSize: 20, color: Colors.white),
+                        style: const TextStyle(fontSize: 20, color: Colors.white),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       ListView.builder(
@@ -207,7 +207,7 @@ class _QuizScreenState extends State<QuizScreen> {
                                     incorrectAnswers++; // it means add the incorrect answer number until the las question
                                   }
                                   if (currentIndexQuestion < data.length - 1) {
-                                    Future.delayed(Duration(milliseconds: 400),
+                                    Future.delayed(const Duration(milliseconds: 400),
                                         () {
                                       gotoNextQuestion();
                                     });
@@ -227,17 +227,17 @@ class _QuizScreenState extends State<QuizScreen> {
                                 // until now our app is hold on last question now we have display the final result;
                               },
                               child: Container(
-                                margin: EdgeInsets.only(bottom: 20),
+                                margin: const EdgeInsets.only(bottom: 20),
                                 alignment: Alignment.center,
                                 width: MediaQuery.of(context).size.width,
-                                padding: EdgeInsets.all(15),
+                                padding: const EdgeInsets.all(15),
                                 decoration: BoxDecoration(
                                   color: optionColor[index],
                                   borderRadius: BorderRadius.circular(10),
                                 ),
                                 child: Text(
                                   optionList[index].toString(),
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 18, color: Colors.black),
                                 ),
                               ),

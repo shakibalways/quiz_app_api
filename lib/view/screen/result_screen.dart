@@ -31,7 +31,7 @@ class ResultScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              const Text(
                 "Congratulation",
                 style: TextStyle(
                     fontSize: 30,
@@ -40,32 +40,32 @@ class ResultScreen extends StatelessWidget {
               ),
               Text(
                 "${correctPercentage.toStringAsFixed(1)}%",
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 40,
                     fontWeight: FontWeight.bold,
                     color: Colors.white),
               ),
               Text(
                 "Correct Answer: $correctAnswer",
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                     color: Colors.green),
               ),
               Text(
                 "InCorrect Answer: $incorrectAnswer",
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 20, fontWeight: FontWeight.bold, color: Colors.red),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               ElevatedButton(
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => SplashScreen()));
+                        MaterialPageRoute(builder: (context) => const SplashScreen()));
                   },
-                  child: Text("Back to Home"))
+                  child: const Text("Back to Home"))
             ],
           ),
         ),

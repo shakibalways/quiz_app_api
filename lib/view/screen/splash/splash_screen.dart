@@ -45,8 +45,8 @@ class _SplashScreenState extends State<SplashScreen> {
                 "Quiz App Shakib",
                 style: TextStyle(color: Colors.white, fontSize: 35),
               ),
-              SizedBox(height: 20),
-              Text(
+              const SizedBox(height: 20),
+              const Text(
                 "Enjoy playing the quiz game as the same time gaiming knowladge as well!",
                 style: TextStyle(fontSize: 18, color: RColor.lightGrey),
               ),
