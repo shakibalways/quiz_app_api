@@ -146,8 +146,8 @@ class _QuizScreenState extends State<QuizScreen> {
                                 width: 70,
                                 child: CircularProgressIndicator(
                                   value: seconds / 60,
-                                  valueColor:
-                                      const AlwaysStoppedAnimation(Colors.white),
+                                  valueColor: const AlwaysStoppedAnimation(
+                                      Colors.white),
                                 ),
                               )
                             ],
@@ -181,7 +181,8 @@ class _QuizScreenState extends State<QuizScreen> {
                       ),
                       Text(
                         data[currentIndexQuestion]['question'],
-                        style: const TextStyle(fontSize: 20, color: Colors.white),
+                        style:
+                            const TextStyle(fontSize: 20, color: Colors.white),
                       ),
                       const SizedBox(
                         height: 20,
@@ -200,15 +201,15 @@ class _QuizScreenState extends State<QuizScreen> {
                                       optionList[index].toString()) {
                                     //correct option color
                                     optionColor[index] = Colors.green;
-                                    correctAnswer++; // it means add the correct answer number until the las question
+                                    correctAnswers++; // it means add the correct answer number until the las question
                                   } else {
                                     // delay 1 section after selection any option
                                     optionColor[index] = Colors.red;
                                     incorrectAnswers++; // it means add the incorrect answer number until the las question
                                   }
                                   if (currentIndexQuestion < data.length - 1) {
-                                    Future.delayed(const Duration(milliseconds: 400),
-                                        () {
+                                    Future.delayed(
+                                        const Duration(milliseconds: 400), () {
                                       gotoNextQuestion();
                                     });
                                   } else {
@@ -217,11 +218,9 @@ class _QuizScreenState extends State<QuizScreen> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) => ResultScreen(
-                                                correctAnswer: correctAnswers,
-                                                incorrectAnswer:
-                                                    incorrectAnswers,
-                                                totalQuestion:
-                                                    currentIndexQuestion)));
+                                                correctAnswers,
+                                                incorrectAnswers,
+                                                currentIndexQuestion)));
                                   }
                                 });
                                 // until now our app is hold on last question now we have display the final result;

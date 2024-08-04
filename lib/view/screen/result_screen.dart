@@ -8,10 +8,10 @@ class ResultScreen extends StatelessWidget {
   final int totalQuestion;
 
   const ResultScreen(
-      {super.key,
-      required this.correctAnswer,
-      required this.incorrectAnswer,
-      required this.totalQuestion});
+  this.correctAnswer,
+  this.incorrectAnswer,
+  this.totalQuestion,
+      {super.key});
 
   @override
   Widget build(BuildContext context) {
