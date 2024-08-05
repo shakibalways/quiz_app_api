@@ -47,7 +47,7 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
               const SizedBox(height: 20),
               const Text(
-                "Enjoy playing the quiz game as the same time gaiming knowladge as well!",
+                "Enjoy playing the quiz game as the same time gaiming knowladge as well best of luck!",
                 style: TextStyle(fontSize: 18, color: RColor.lightGrey),
               ),
               const Spacer(),
